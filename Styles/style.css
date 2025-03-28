@@ -189,13 +189,12 @@ p {
     height: auto;
     aspect-ratio: 1/1;
     position: relative;
-    padding-bottom:50px ;
 
 }
 .realisation h3{
     position: absolute;
-    top: 42.5%;
-    left: 75%;
+    top: 73.5%;
+    left: 65%;
     transform: translate(-50%, -50%);
     font-size: 2rem;
     width: max-content;
@@ -213,7 +212,7 @@ p {
 }
 
 .realisation img{
-    width: 150%;
+    width: 130%;
     height: 100%;
     object-fit: contain;
     filter: brightness(40%);
@@ -222,7 +221,7 @@ p {
 }
 
 .realisation:hover img{
-    width: 150%;
+    width: 135%;
     height: 100%;
     object-fit: contain;
     filter: brightness(60%);
