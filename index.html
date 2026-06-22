@@ -1,161 +1,175 @@
 <!DOCTYPE html>
-<html>
-    <head>
-            <meta charset="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio de Bils Brayan</title>
+  <meta name="description" content="Bienvenue sur mon portfolio" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="Styles/style.css" />
+</head>
 
-            <title>Portfolio de Bils Brayan</title>
-            <meta type = "description" content= "Bienvenue sur mon portfolio">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-            <link rel="stylesheet" href="Styles/style.css">
+<body>
 
-    </head>
-    
+  <div id="progress-bar"></div>
 
+  <header>
+    <div class="boxed">
+      <div class="flex align-center space-between">
+        <a href="#" class="header-logo"></a>
+        <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+        <nav>
+          <ul class="header-menu">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#about">A propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#realisations">Réalisations</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <body>
+  <main>
 
+    <!-- Hero -->
+    <section class="slider">
+      <img src="images/Background_slider.jpg" alt="" class="slider-background" />
+      <div class="slider-content">
+        <h1><span>Brayan</span> Bils</h1>
+        <p>Étudiant Développeur Full Stack &nbsp;·&nbsp; Web &nbsp;·&nbsp; Java &nbsp;·&nbsp; Android</p>
+        <a href="#about" class="btn">Découvrir mon profil</a>
+      </div>
+    </section>
 
-        <header>
-                <div class="boxed">
-                        <div class="flex align-center space-between">
-                                <a href="https://iut2.univ-grenoble-alpes.fr" class="header-logo" target="_blank">
-                                        <img src="images/Logo_IUT2.jpg" alt="">
-                                </a>
-                                <ul class="header-menu">
-                                <li><a href="#">Accueil</a></li>
-                                <li><a href="#about">A propos</a></li>
-                                <li><a href="#skills">Compétences</a></li>
-                                <li><a href="#realisations">Réalisations</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                                </ul>
-                
-                        </div>
-                </div>
-
-        </header>
-
-
-
-
-
-
-
-    <div id="progress-bar"></div>
-
-        <div class ="slider">
-            <img src="images/Background_slider.jpg" alt="image de fond" class="slider-background">
-            <div class="slider-content">
-
-            <h1>Brayan Bils</h1>
-            <p>Étudiant Développeur Full Stack  Web - Java - Android</p>
+    <!-- À propos -->
+    <section class="section section-card" id="about">
+      <div class="boxed">
+        <div class="flex gap40 align-center wrap">
+          <div class="w40">
+            <h2 class="section-title">A propos<br /><span>de moi</span></h2>
+          </div>
+          <div class="w60">
+            <p>
+              Bils Brayan, étudiant en 1ère année de BUT Informatique à Grenoble et animateur BAFA
+              passionné par le développement web et le jeu vidéo. J'ai participé à divers projets,
+              allant d'une application de gestion de brocante à un système de visioconférence, ce qui
+              m'a permis de développer mes compétences techniques et ma capacité à travailler en équipe.
+              Toujours motivé par l'apprentissage de nouvelles technologies, je cherche à créer des
+              solutions innovantes et performantes.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Développement Web</span>
+              <span class="tag">Java</span>
+              <span class="tag">Android</span>
+              <span class="tag">Travail en équipe</span>
+              <span class="tag">Animateur BAFA</span>
             </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="section" id="about">
-            <div class="boxed">
-                <div class="flex">
-                    <div class="w40">
-                    <h2>A propos de moi</h2>
-                     </div>
-                     <div class="w60">
-                        <p>
-                        Bils Brayan, étudiant en 1ère année de BUT Informatique à Grenoble et animateur BAFA passionné par le développement web et le jeu vidéo. J'ai participé à divers projets, allant d'une application de gestion de brocante à un système de visioconférence, ce qui m’a permis de développer mes compétences techniques et ma capacité à travailler en équipe.
-                         Toujours motivé par l’apprentissage de nouvelles technologies, je cherche à créer des solutions innovantes et performantes.
+    <!-- Compétences -->
+    <section class="section section-dark" id="skills">
+      <div class="boxed text-center">
+        <h2 class="section-title">Mes <span class="accent-dot">compétences</span></h2>
+        <p class="section-subtitle">Les technologies que j'utilise au quotidien</p>
+        <div class="flex gap20 wrap space-between">
 
-                      </p>
-                     </div>
-                </div>
-            </div>
+          <div class="w25 skill">
+            <img src="images/Angular_logo.png" alt="Logo Angular" />
+            <img src="images/Symfony_logo.png" alt="Logo Symfony" />
+            <h3>Angular / Symfony</h3>
+          </div>
+
+          <div class="w25 skill">
+            <img src="images/Unity_logo.png" alt="Logo Unity" />
+            <h3>Unity</h3>
+          </div>
+
+          <div class="w25 skill">
+            <img src="images/jQuerry_logo.png" alt="Logo jQuery" />
+            <h3>jQuery</h3>
+          </div>
+
+          <div class="w25 skill">
+            <img src="images/Flutter_logo.png" alt="Logo Flutter" />
+            <h3>Flutter</h3>
+          </div>
+
         </div>
+      </div>
+    </section>
 
-        <div class="section dark" id="skills">
-                <div class="boxed text-center">
-                    <h2>Découvrez Mes compétences</h2>
-                    <div class="flex gap20">
-                        <div class="w25 skill">
-                            <img src="images/HTML5_logo.png" alt="logo html">
-                            <h3>HTML</h3>
-                        </div>
-                        <div class="w25 skill">
-                            <img src="images/CSS3_logo.png" alt="logo css">
-                            <h3>CSS</h3>
-                        </div>
-                        <div class="w25 skill">
-                            <img src="images/javascript-logo.png" alt="logo Js">
-                            <h3>Javascript</h3>
-                        </div>
-                        <div class="w25 skill">
-                            <img src="images/java_logo.png" alt="logo Java">
-                            <h3>Java / Android</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Réalisations -->
+    <section class="section section-card" id="realisations">
+      <div class="boxed text-center">
+        <h2 class="section-title">Mes <span class="accent-dot">réalisations</span></h2>
+        <p class="section-subtitle">Quelques projets réalisés durant ma formation</p>
+        <div class="flex wrap gap20 space-between">
 
+          <div class="w32 realisation">
+            <a href="Rezisten.html">
+              <img src="images/Rezisten.png" alt="Projet Rezisten" />
+              <span class="tag-tech">Web · PHP · SQL</span>
+              <h3>Rezisten</h3>
+            </a>
+          </div>
 
+          <div class="w32 realisation">
+            <a href="Orgabrac.html">
+              <img src="images/Orgabrac.png" alt="Projet Orgabrac" />
+              <span class="tag-tech">Java · JavaFX</span>
+              <h3>Orgabrac</h3>
+            </a>
+          </div>
 
-        <div class="section" id="realisations">
-                <div class="boxed text-center">
-                        <h2>Mes réalisations</h2>
-                        <div class="flex wrap gap20 space-between">
-                                
-                                <div class="w32 realisation">
-                                        <a href="Rezisten.html">
-                                            <img src="images/Rezisten.png" alt="Rezisten.png">
-                                        </a>
-                                        <h3>Rezisten</h3>
-
-                                    </div>                                
-                                <div class="w32 realisation">
-                                        <a href="Orgabrac.html">
-                                                <img src="images/Orgabrac.png" alt=""> 
-                                        </a> 
-                                        <h3>Orgabrac</h3>
-                                </div>
-                        </div>
-
-
-                </div>
         </div>
+      </div>
+    </section>
 
+    <!-- Contact -->
+    <section class="section section-dark" id="contact">
+      <div class="boxed text-center">
+        <h2 class="section-title">Me <span class="accent-dot">contacter</span></h2>
+        <p class="section-subtitle">N'hésitez pas à me contacter pour toute opportunité</p>
+        <div class="flex space-between wrap gap20">
 
-        <div class="section dark" id="contact">
-                <div class="boxed text-center">
-                        <h2>Contactez-moi</h2>
-                        <div class="flex space-between">
-                                <div class="w32 contact">
-                                        <span class="material-symbols-outlined">
-                                                mail
-                                                </span>
-                                        <span class="label">E-mail : </span>
-                                        <span class="value">bilsbrayan@gmail.com</span>
-                                </div>
-                                <div class="w32 contact">
-                                        <span class="material-symbols-outlined">
-                                                phone
-                                                </span>
-                                        <span class="label">Téléphone : </span>
-                                        <span class="value">07 61 35 35 07</span>
-                                </div>
-                                <div class="w32 contact">
-                                        <i class="fa fa-linkedin-square" style="font-size:24px"></i>
-                                        <span class="label">Linkedin : </span>
-                                        <a href="https://www.linkedin.com/in/brayan-bils-12b20a32a" class="value" target="_blank">Bils Brayan </a>
-                                </div>
+          <div class="w32 contact-card">
+            <span class="material-symbols-outlined icon">mail</span>
+            <span class="label">E-mail</span>
+            <a href="mailto:bilsbrayan@gmail.com" class="value">bilsbrayan@gmail.com</a>
+          </div>
 
+          <div class="w32 contact-card">
+            <span class="material-symbols-outlined icon">phone</span>
+            <span class="label">Téléphone</span>
+            <span class="value">07 61 35 35 07</span>
+          </div>
 
-                        </div>
+          <div class="w32 contact-card">
+            <i class="fa fa-linkedin-square icon"></i>
+            <span class="label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/brayan-bils-12b20a32a" class="value" target="_blank">Bils Brayan</a>
+          </div>
 
-
-                </div>
         </div>
+      </div>
+    </section>
 
-    </body>
+  </main>
 
-    <script src="js/app.js"></script>
+  <footer>
+    <div class="boxed">
+      <p>© 2025 Brayan Bils — Tous droits réservés</p>
+    </div>
+  </footer>
 
+  <script src="js/app.js"></script>
 
-
-    </html>
+</body>
+</html>
