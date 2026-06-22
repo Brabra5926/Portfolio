@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stage Ubilink - Réalisation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Styles/style.css" />
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <header>
+    <div class="boxed">
+      <div class="flex align-center space-between">
+        <a href="#" class="header-logo"></a>
+        <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+        <nav>
+          <ul class="header-menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#about">A propos</a></li>
+            <li><a href="index.html#skills">Compétences</a></li>
+            <li><a href="index.html#realisations">Réalisations</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <div class="project-hero">
+      <img src="images/Ubilink_logo.png" alt="" class="project-hero-bg" />
+      <div class="project-hero-content">
+        <h1>Stage Ubilink</h1>
+        <p>Développeur Web · Meylan (Isère) · 10 semaines · 2025</p>
+      </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <section class="section section-card">
+      <div class="boxed">
+
+        <a href="index.html#realisations" class="back-link">← Retour aux réalisations</a>
+
+        <!-- Présentation entreprise -->
+        <div class="flex gap40 wrap align-center" style="margin-bottom: 60px;">
+          <div class="w40">
+            <img src="images/Ubilink_logo.png" alt="Logo Ubilink" style="width:100%; max-width:300px; object-fit:contain; border-radius: 12px;" />
+          </div>
+          <div class="w60 project-content">
+            <h3>L'entreprise</h3>
+            <p>Ubilink est une start-up basée à Meylan (Isère), spécialisée dans le développement d'applications web autour de la réalité virtuelle. Elle s'adresse à des secteurs comme l'hôtellerie, l'événementiel et l'immobilier, en proposant <strong>iBIM</strong> — un outil permettant de créer des univers virtuels 3D interactifs accessibles depuis n'importe quel appareil connecté.</p>
+            <div class="tech-tags" style="margin-top: 16px;">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">WebRTC</span>
+              <span class="tech-tag">Socket.io</span>
+              <span class="tech-tag">Bootstrap</span>
+              <span class="tech-tag">SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deux missions -->
+        <div class="flex gap40 wrap space-between">
+
+          <!-- Mission 1 : Inventory -->
+          <div class="w40 project-content">
+            <h3>Mission 1 — Module Inventory</h3>
+            <p>Développement d'un module de gestion d'inventaire dans le back-office d'iBIM, permettant aux administrateurs de visualiser et modifier les objets 3D disponibles dans chaque salle virtuelle.</p>
+            <ul>
+              <li>Conception de la page de liste des objets de l'inventaire.</li>
+              <li>Intégration avec la base de données via des requêtes AJAX sécurisées.</li>
+              <li>Gestion de données JSON imbriquées et multilangue.</li>
+              <li>Modifications visibles en temps réel dans l'application iBIM.</li>
+            </ul>
+          </div>
+
+          <!-- Mission 2 : Visioconférence -->
+          <div class="w60 project-content">
+            <h3>Mission 2 — Outil de visioconférence</h3>
+            <p>Développement from scratch d'un système de visioconférence interne à Ubilink, basé sur WebRTC et les sockets, permettant à l'équipe d'organiser ses rendez-vous clients sans passer par des plateformes externes comme Teams ou Whereby.</p>
+            <ul>
+              <li>Connexion peer-to-peer automatisée via WebRTC et sockets.</li>
+              <li>Système sécurisé de rooms avec clé unique de 32 caractères et plage horaire.</li>
+              <li>Page de paramétrage : choix caméra, micro, sortie audio et aperçu avant entrée.</li>
+              <li>Mosaïque dynamique : algorithme de disposition optimale selon le nombre de participants et la taille de l'écran.</li>
+              <li>Fonctionnalités complètes : partage d'écran, plein écran, mute micro/caméra, chat écrit.</li>
+              <li>Mise en production et tests en conditions réelles pour un rendez-vous client.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Galerie -->
+        <div class="project-gallery" style="margin-top: 60px;">
+          <img src="images/Ubilink_visio.png" alt="Interface de visioconférence en test" />
+          <img src="images/Ubilink_visio2.png" alt="Logo Ubilink" style="object-fit: contain; background: #fff; padding: 30px;" />
+        </div>
+
+        <!-- Ce que ça m'a apporté -->
+        <div class="project-content" style="margin-top: 60px; max-width: 800px;">
+          <h3>Bilan personnel</h3>
+          <p>Ce stage m'a permis de développer mon autonomie en travaillant sur des projets directement utilisés en production, avec de vrais délais et de vrais enjeux. J'ai découvert et maîtrisé des technologies que je ne connaissais pas — WebRTC, sockets, peer-to-peer — et j'ai pu voir l'impact direct de mon travail lors d'un rendez-vous client réel.</p>
+          <p>Au-delà du technique, c'est l'expérience du travail en équipe dans une structure agile et bienveillante qui m'a le plus apporté, en me donnant confiance dans ma capacité à m'adapter et à monter en compétences rapidement.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="boxed">
+      <p>© 2026 Brayan Bils — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
