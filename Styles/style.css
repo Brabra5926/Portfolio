@@ -219,7 +219,9 @@ header {
 .w60 { width: 58%; }
 .w40 { width: 38%; }
 .w32 { width: 32%; }
-.w25 { width: 23%; }
+.w25 { width: 25%; }
+.w48 { width: 48%; }
+
 
 /* ── À propos ────────────────────────────── */
 #about .w40 h2 {

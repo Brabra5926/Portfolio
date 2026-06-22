@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stage LNCMI - Réalisation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Styles/style.css" />
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <header>
+    <div class="boxed">
+      <div class="flex align-center space-between">
+        <a href="#" class="header-logo"></a>
+        <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+        <nav>
+          <ul class="header-menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#about">A propos</a></li>
+            <li><a href="index.html#skills">Compétences</a></li>
+            <li><a href="index.html#realisations">Réalisations</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <div class="project-hero">
+      <img src="images/LNCMI_logo.png" alt="" class="project-hero-bg" />
+      <div class="project-hero-content">
+        <h1>Stage LNCMI</h1>
+        <p>Développeur Web · CNRS Grenoble · 14 semaines · 2026</p>
+      </div>
+    </div>
+
+    <section class="section section-card">
+      <div class="boxed">
+
+        <a href="index.html#realisations" class="back-link">← Retour aux réalisations</a>
+
+        <!-- Présentation structure -->
+        <div class="flex gap40 wrap align-center" style="margin-bottom: 60px;">
+          <div class="w40" style="text-align:center;">
+            <img src="images/LNCMI_logo.png" alt="Logo LNCMI"
+              style="width:100%; max-width:220px; object-fit:contain; border-radius:12px; background:#fff; padding:20px;" />
+          </div>
+          <div class="w60 project-content">
+            <h3>La structure d'accueil</h3>
+            <p>Le LNCMI (Laboratoire National des Champs Magnétiques Intenses) est un laboratoire de recherche du CNRS créé en 2009, implanté à Grenoble et Toulouse. Il met à disposition des chercheurs du monde entier des champs magnétiques parmi les plus intenses au monde, jusqu'à 42 Tesla en continu à Grenoble.</p>
+            <p>Mon stage s'est déroulé au sein du service Informatique, rattaché au pôle Soutien technique, aux côtés de M. Buisson Sébastien (maître de stage) et Mme Druart Marilyne (référente Symfony).</p>
+            <div class="tech-tags" style="margin-top: 16px;">
+              <span class="tech-tag">Symfony</span>
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MariaDB</span>
+              <span class="tech-tag">Twig</span>
+              <span class="tech-tag">DataTables</span>
+              <span class="tech-tag">jQuery</span>
+              <span class="tech-tag">HTML2PDF</span>
+              <span class="tech-tag">Bootstrap</span>
+              <span class="tech-tag">Figma</span>
+              <span class="tech-tag">Jira</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contexte + Conception -->
+        <div class="flex gap40 wrap space-between" style="margin-bottom: 60px;">
+          <div class="w48 project-content">
+            <h3>Contexte du projet</h3>
+            <p>Les agents de prévention du laboratoire utilisaient une application PHP non structurée pour gérer les contrôles réglementaires du site. Elle ne gérait ni le suivi des non-conformités, ni la validation des documents, et reposait sur un processus entièrement papier : impression du rapport, signature physique par la direction, scan, puis réintégration en base de données.</p>
+            <p>La mission consistait à reprendre cette application de zéro avec Symfony, en dématérialisant entièrement le processus de validation et de signature.</p>
+          </div>
+          <div class="w48 project-content">
+            <h3>Conception & recueil de besoins</h3>
+            <p>Avant tout développement, un rendez-vous a été organisé avec les agents de prévention pour comprendre leurs usages. Ce recueil a débouché sur un cahier des charges formalisé le 1er avril 2026.</p>
+            <ul>
+              <li>Maquettes réalisées sur Figma et validées par les AP avant développement.</li>
+              <li>Modélisation de la base de données et des user stories sur Miro.</li>
+              <li>Kanban mis en place sur Jira pour le suivi des tâches.</li>
+              <li>Deux profils définis : Agent de prévention (CRUD complet) et Direction (lecture + signature).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tableau des contrôles -->
+        <div class="project-content" style="margin-bottom: 60px;">
+          <h3>Le tableau des contrôles</h3>
+          <p>L'interface principale de l'application affiche la liste des contrôles réglementaires sous forme de tableau enrichi avec DataTables. Chaque ligne indique le créateur, les dates, le domaine, l'installation, le bâtiment, l'organisme chargé du contrôle, les observations, et un compteur de non-conformités coloré en rouge si des non-conformités sont encore en cours. Les boutons en fin de ligne s'adaptent selon l'état du contrôle (signé ou non).</p>
+          <img src="images/tableau_controle.png" alt="Tableau de la liste des contrôles"
+            style="width:100%; border-radius:10px; margin-top:16px; border: 1px solid rgba(255,255,255,0.08);" />
+        </div>
+
+        <!-- Code DataTables en deux colonnes -->
+        <div class="project-content" style="margin-bottom: 60px;">
+          <h3>Implémentation des tableaux DataTables</h3>
+          <p>Pour éviter toute duplication de code, j'ai centralisé la logique d'initialisation des tableaux dans une fonction <code>initCustomDataTable()</code> réutilisable. Elle prend en paramètre le sélecteur du tableau, le modal de gestion des colonnes, la clé de localStorage pour mémoriser la visibilité des colonnes, ainsi que les définitions de largeur. Cette fonction est appelée une fois pour le tableau des contrôles, et une fois pour le tableau des non-conformités.</p>
+          <div class="flex gap40 wrap" style="margin-top: 20px;">
+            <div class="w48">
+              <p style="font-size:0.85rem; color: var(--text-muted); margin-bottom: 8px;">Initialisation des deux tableaux</p>
+              <img src="images/Initdatatables.png" alt="Initialisation des tableaux DataTables"
+                style="width:100%; border-radius:10px; border: 1px solid rgba(255,255,255,0.08);" />
+            </div>
+            <div class="w48">
+              <p style="font-size:0.85rem; color: var(--text-muted); margin-bottom: 8px;">Ajout des barres de recherche par colonne</p>
+              <img src="images/FilterColumn.png" alt="Recherche par colonne DataTables"
+                style="width:100%; border-radius:10px; border: 1px solid rgba(255,255,255,0.08);" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Autres réalisations -->
+        <div class="flex gap40 wrap space-between" style="margin-bottom: 60px;">
+          <div class="w48 project-content">
+            <h3>Génération PDF & signature</h3>
+            <ul>
+              <li>Génération automatique des formulaires PDF avec HTML2PDF, nommés selon la convention définie avec les AP (Année – Domaine).</li>
+              <li>Signature électronique intégrée : l'image de signature est injectée dans le template Twig, HTML2PDF régénère le PDF complet qui remplace l'ancien en base.</li>
+              <li>Blocage de la modification après signature : le bouton "Éditer" est remplacé par "Voir" une fois le document signé.</li>
+            </ul>
+          </div>
+          <div class="w48 project-content">
+            <h3>Bilan personnel</h3>
+            <p>Ce stage m'a permis de monter en compétences sur Symfony en conditions réelles, de gérer un projet de A à Z en autonomie — du recueil de besoins jusqu'à la mise en production — et de découvrir des librairies comme DataTables et HTML2PDF. Ce qui m'a le plus marqué, c'est la satisfaction de voir l'outil directement utilisé, avec un impact concret : la suppression d'une procédure papier inutile et un suivi des non-conformités enfin fiable.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="boxed">
+      <p>© 2026 Brayan Bils — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
